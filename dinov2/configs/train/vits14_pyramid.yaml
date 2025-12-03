@@ -21,7 +21,7 @@ train:
   dataset_path: HuggingFace:root=tsbpp/fall2025_deeplearning:split=train
   centering: sinkhorn_knopp
   output_dir: /gpfs/data/shenlab/aj4718/dinov2/logs/vits14_pyramid
-  OFFICIAL_EPOCH_LENGTH: 1953
+  OFFICIAL_EPOCH_LENGTH: 7813
   num_workers: 4
   saveckp_freq: 1
 student:

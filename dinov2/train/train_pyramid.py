@@ -329,7 +329,7 @@ def main(args):
 
     if distributed.is_main_process():
         wandb.init(
-            project="dinov2_pyramid",
+            project="dinov2_pyramid_dl",
             config=OmegaConf.to_container(cfg, resolve=True),
             resume=not args.no_resume,
             name=args.run_name # Use run name from args
