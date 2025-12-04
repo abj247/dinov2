@@ -18,10 +18,10 @@ ibot:
   head_nlayers: 3
 train:
   batch_size_per_gpu: 64
-  dataset_path: HuggingFace:root=tsbpp/fall2025_deeplearning:split=train
+  dataset_path: HuggingFace:root=tsbpp/fall2025_deeplearning,sm12377/tr_imgs:split=train
   centering: sinkhorn_knopp
-  output_dir: /gpfs/data/shenlab/aj4718/dinov2/logs/vits14_pyramid
-  OFFICIAL_EPOCH_LENGTH: 7813
+  output_dir: /gpfs/data/shenlab/aj4718/dinov2/logs/vits14_pyramid_1m
+  OFFICIAL_EPOCH_LENGTH: 4015
   num_workers: 4
   saveckp_freq: 1
 student:

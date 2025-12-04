@@ -53,6 +53,12 @@ def get_args_parser(add_help=True):
         help="Name for the wandb run",
         default="pyramid_distillation_4gpu",  # Default run name
     )
+    parser.add_argument(
+        "--wandb-project",
+        type=str,
+        help="Name for the wandb project",
+        default="dinov2_pyramid",
+    )
     return parser
 
 
@@ -329,7 +335,7 @@ def main(args):
 
     if distributed.is_main_process():
         wandb.init(
-            project="dinov2_pyramid",
+            project=args.wandb_project,
             config=OmegaConf.to_container(cfg, resolve=True),
             resume=not args.no_resume,
             name=args.run_name # Use run name from args
